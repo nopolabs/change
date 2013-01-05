@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>change</title>
+    <script type='text/javascript'>
+    function make_change() {
+      var loc = window.location,
+          url = '/' + document.form.elements.amt.value;
+      document.form.action = url;
+      window.location = url;
+    }
+    </script>
+  </head>
+  <body>
+    <form name='form' onsubmit='make_change(); return false;'>
+      How much change do you want to make?
+      <input name='amt' type='text' value='0'/>
+      <input type='submit' value='make change'/>
+    </form>
+  </body>
+</html>
